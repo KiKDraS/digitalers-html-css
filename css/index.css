@@ -1,0 +1,12 @@
+section {
+    padding: 16px 0;
+}
+
+.d-inline {
+    display: inline-block;
+}
+
+.disclaimer {
+    font-size: 12px;
+    margin-left: 8px;
+}
