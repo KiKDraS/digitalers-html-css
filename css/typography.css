@@ -2,27 +2,27 @@
 
 
 body,
-.lato-light,
-.lato-normal,
-.lato-bold {
+.text-light,
+.text-normal,
+.text-bold {
     font-family: "Lato", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
 
 span,
-.lato-light {
+.text-light {
     font-weight: 300;
 }
 
 body,
-.lato-normal {
+.text-normal {
     font-weight: 400;
 }
 
 h1,
 h2,
 h3,
-h4 .lato-bold {
+h4 .text-bold {
     font-weight: 700;
 }
