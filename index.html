@@ -6,21 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digitalers</title>
     <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="css/stylesReset.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
-<!-- Código en la rama test -->
-<!-- Código en la rama test 1 -->
 
 <body>
-    <header>
+    <header class="bg-dark">
         <h1>Contenido teórico y ejemplos</h1>
         <nav>
             <a href="#git-github">Git/GitHub</a>
             <a href="#css">CSS</a>
         </nav>
     </header>
-    <main>
+    <main class="bg-light">
         <section id="git-github">
             <h2>Git/GitHub</h2>
             <section>
@@ -50,13 +49,25 @@
                     Además,
                     ofrece herramientas para facilitar la colaboración entre desarrolladores, como:</p>
                 <ul>
-                    <li><strong>Repositorios remotos</strong>: Almacenan el código en la nube, accesible para múltiples
-                        usuarios.</li>
-                    <li><strong>Issues y Pull Requests</strong>: Facilitan la colaboración y revisión de código.</li>
-                    <li><strong>Integración Continua</strong>: Permite automatizar pruebas y despliegues.</li>
-                    <li><strong>Comunidades y Equipos</strong>: Fomenta la colaboración entre desarrolladores a través
+                    <li>
+                        <span class="text-bold">Repositorios remotos</span>:
+                        Almacenan el código en la nube, accesible para múltiples
+                        usuarios.
+                    </li>
+                    <li>
+                        <strong>Issues y Pull Requests</strong>:
+                        Facilitan la colaboración y revisión de código.
+                    </li>
+                    <li>
+                        <strong>Integración Continua</strong>:
+                        Permite automatizar pruebas y despliegues.
+                    </li>
+                    <li>
+                        <strong>Comunidades y Equipos</strong>:
+                        Fomenta la colaboración entre desarrolladores a través
                         de
-                        organizaciones y equipos.</li>
+                        organizaciones y equipos.
+                    </li>
                 </ul>
             </section>
 
@@ -89,11 +100,61 @@
                             Merge</a></li>
                     <li><a href="https://www.youtube.com/watch?v=wL8gCda3pG4" target="_blank">GitHub Pages</a></li>
                 </ul>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/L_lWQZNhN7w?si=H1kZ-1Wub39Wnje1"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </section>
         </section>
-        <section id="css"></section>
+        <section id="css">
+            <h2>Reglas de trabajo de CSS</h2>
+            <ul>
+                <li>
+                    <span class="text-bold">Herencia</span>
+                </li>
+                <li>
+                    <span class="text-bold">Importancia</span>
+                </li>
+                <li>
+                    <span class="text-bold">Especificidad</span>
+                </li>
+                <li>
+                    <span class="text-bold">*Orden de lectura</span>
+                </li>
+            </ul>
+            <h3>Tipos de Selectores</h3>
+            <ul>
+                <li>Selectores Básicos
+                    <ul>
+                        <li>ID (#)</li>
+                        <li>Clase (.)</li>
+                        <li>Pseudo-clases - Selector que permite modificar un elemento según su estado o la interacción
+                            del usuario con el mismo
+                            <ul>
+                                <li>:link - Propia del elemento a. Aplica a aquellos elementos a que nunca fueron
+                                    "clickeados" por el usuario</li>
+                                <li>:visited - Propia del elemento a. Aplica a aquellos elementos a que fueron
+                                    "clickeados" por el usuario</li>
+                                <li>:hover - Permite modificar el estilo del elemento cuando el usuario pasa el mouse
+                                    por arriba</li>
+                            </ul>
+                        </li>
+                        <li>Etiqueta (nombre de la etiqueta)</li>
+                        <li>Universal (*)</li>
+                    </ul>
+                </li>
+                <li>Selectores Compuestos
+                    <ul>
+                        <li>Selector grupal (selector, selector {...})</li>
+                    </ul>
+                </li>
+                <button>Soy un botón</button>
+            </ul>
+            <section class="bg-image"></section>
+        </section>
     </main>
-    <footer>
+    <footer class="bg-dark">
         <span>&copy; Digitalers 2024</span>
     </footer>
 </body>

@@ -5,9 +5,12 @@
 
 html {
     scroll-behavior: smooth;
+    /* Scroll suave */
 }
 
-body {
+header,
+main,
+footer {
     padding: 8px 16px;
 }
 

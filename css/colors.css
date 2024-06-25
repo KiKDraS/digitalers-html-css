@@ -1,0 +1,23 @@
+.text-red {
+    color: red;
+}
+
+.text-green {
+    color: green;
+}
+
+.text-warning {
+    color: rgb(205, 205, 50);
+}
+
+.text-black {
+    color: #333;
+}
+
+.bg-dark {
+    background-color: rgba(51, 51, 51, 0.5);
+}
+
+.bg-light {
+    background-color: rgba(185, 184, 184, 0.627);
+}

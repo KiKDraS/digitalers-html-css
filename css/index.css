@@ -10,3 +10,39 @@ section {
     font-size: 12px;
     margin-left: 8px;
 }
+
+a {
+    color: #6f6868;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/*
+    Selectores pseudo-clases
+*/
+a:hover {
+    font-size: 20px;
+}
+
+button {
+    background-color: inherit;
+    /*Agarra el background-color de tu elemento contenedor*/
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/*
+    Background
+*/
+
+.bg-image {
+    border: 1px solid black;
+    height: 250px;
+    background-image: url("https://cdn.pixabay.com/photo/2023/07/13/06/59/canyon-8124036_960_720.jpg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
