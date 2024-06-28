@@ -48,6 +48,8 @@ p {
     font-size: 1.125rem;
 }
 
+/*No usar rem para armar espacios (margin/padding)*/
+
 .rem {
     font-size: 1.5rem;
     /*Se evalúa el tamaño de tipografía que el usuario tiene configurado en su navegador. Por defecto, son 16px*/
