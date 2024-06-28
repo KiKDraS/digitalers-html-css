@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-/*
-    Navegador lee que a .text-bold le tiene que aplicar font-family, font-optical....
-*/
 body,
 .text-light,
 .text-normal,
@@ -23,9 +20,6 @@ body,
     font-weight: 400;
 }
 
-/*
-    Navegador lee que a .text-bold le tiene que aplicar font-weight: 700
-*/
 h1,
 h2,
 h3,
@@ -34,30 +28,27 @@ h4,
     font-weight: 700;
 }
 
-/*
-    .text-bold {
-        font-family: "Lato", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        font-weight: 700;
-    }
+/*32px => 32/16 = 2rem*/
+h1 {
+    font-size: 2rem;
+}
 
-    Clase utilitaria
-        => Una clase genérica que contiene una serie de propiedades de CSS que puedan ser utilizadas en varios elementos independientemente del contexto del mismo
-            => ej. En el diseño de la página web hay varios elementos que necesitan una tipografía Lato, normal y finita
-                => .text-light {
-                    font-family: "Lato", sans-serif;
-                    font-optical-sizing: auto;
-                    font-style: normal;
-                    font-weight: 300;
-                }
+/*28px => 28/16 = 1.75rem*/
+h2 {
+    font-size: 1.75rem;
+}
 
-    Selector Compuesto => Combinación de selectores básicos y/o compuestos
-        => Selector grupal
-            => Permite aplicar la misma propiedad a varios selectores
-                => ej. body, .text-light, .text-normal, .text-bold {
-                    font-family: "Lato", sans-serif;
-                    font-optical-sizing: auto;
-                    font-style: normal;
-                } (quiero que el selector body aplique las propiedades de texto font-family, font-optical-sizing, font-style. Quiero que el selecto .text-light aplique las propiedades font-family....)
-*/
+/*24px => 24/16 = 1.5rem*/
+h3 {
+    font-size: 1.5rem;
+}
+
+/*18px => 18/16 = 1.125rem*/
+p {
+    font-size: 1.125rem;
+}
+
+.rem {
+    font-size: 1.5rem;
+    /*Se evalúa el tamaño de tipografía que el usuario tiene configurado en su navegador. Por defecto, son 16px*/
+}

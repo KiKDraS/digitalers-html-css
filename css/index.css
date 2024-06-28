@@ -17,32 +17,85 @@ a {
     text-decoration: none;
 }
 
-/*
-    Selectores pseudo-clases
-*/
-a:hover {
-    font-size: 20px;
-}
-
-button {
-    background-color: inherit;
-    /*Agarra el background-color de tu elemento contenedor*/
-    border: none;
-}
-
-button:hover {
-    cursor: pointer;
+.logo {
+    width: 48px;
 }
 
 /*
-    Background
+    Tablas
 */
+table {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+    /* border: 1px solid black; */
+}
 
-.bg-image {
+thead {
+    background-color: azure;
+    /* border: 1px solid black; */
+}
+
+tbody {
+    background-color: bisque;
+    /* border: 1px solid black; */
+}
+
+th,
+td {
+    padding: 8px;
     border: 1px solid black;
-    height: 250px;
-    background-image: url("https://cdn.pixabay.com/photo/2023/07/13/06/59/canyon-8124036_960_720.jpg");
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
+}
+
+/*
+    Selector descendente
+*/
+
+/*
+    Calcular el valor de especificidad
+        => selector de etiqueta (div): 1
+        => selector de etiqueta (p): 1
+        => valor: 1 + 1 = 2
+*/
+div>p {
+    background-color: red;
+    color: darkblue;
+}
+
+/*
+    Calcular el valor de especificidad
+        => selector de etiqueta (div): 1
+        => selector de etiqueta (p): 1
+        => valor: 1 + 1 = 2
+*/
+div p {
+    background-color: blue;
+    color: aliceblue;
+}
+
+/*
+    Calcular el valor de especificidad
+        => selector de clase (.padre): 10
+        => selector de etiqueta (p): 1
+        => valor: 10 + 1 = 11
+*/
+.padre p {
+    background-color: cadetblue;
+    color: darkgray;
+}
+
+/*
+    Calcular el valor de especificidad
+        => selector de clase (.padre): 10
+        => selector de etiqueta (p): 1
+        => valor: 10 + 1 = 11
+*/
+.padre>p {
+    background-color: rgb(160, 95, 141);
+    color: rgb(169, 169, 169);
+}
+
+.padre {
+    padding: 16px;
 }
