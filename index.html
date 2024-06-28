@@ -16,6 +16,7 @@
         <h1>Contenido teórico y ejemplos</h1>
         <nav>
             <a href="#git-github">Git/GitHub</a>
+            <a href="#tablas">Tablas</a>
             <a href="#css">CSS</a>
         </nav>
     </header>
@@ -102,10 +103,57 @@
                 </ul>
 
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/L_lWQZNhN7w?si=H1kZ-1Wub39Wnje1"
-                    title="YouTube video player" frameborder="0"
+                    title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </section>
+        </section>
+        <section id="tablas">
+            <h2>Tablas</h2>
+            <table>
+                <thead>
+                    <!-- Fila de table -->
+                    <tr>
+                        <!-- Columna de encabezado -->
+                        <th>
+                            Logo
+                        </th>
+                        <th>Nombre del Lenguaje</th>
+                        <th>Nivel de habilidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Fila de table -->
+                    <tr>
+                        <!-- Columna de datos -->
+                        <td>
+                            <img src="https://cdn.pixabay.com/photo/2016/11/19/22/25/html5-1841458_1280.png" alt="logo"
+                                class="logo">
+                        </td>
+                        <td>HTML5</td>
+                        <!-- rowspan = cuántas filas quiero que ocupe el contenido -->
+                        <td rowspan="2">Experto</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://cdn.pixabay.com/photo/2016/11/19/23/00/css3-1841590_1280.png" alt="logo"
+                                class="logo">
+                        </td>
+                        <td>CSS3</td>
+                        <!-- <td>Avanzado</td> -->
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://cdn.pixabay.com/photo/2017/03/30/17/41/javascript-2189147_640.png"
+                                alt="logo" class="logo">
+                        </td>
+                        <!-- colspan = cuántas columnas quiero que ocupe el contenido -->
+                        <td colspan="2">Sin dato</td>
+                        <!-- <td>Inicial</td> -->
+                    </tr>
+                </tbody>
+                <!-- <tfoot></tfoot> -->
+            </table>
         </section>
         <section id="css">
             <h2>Reglas de trabajo de CSS</h2>
@@ -123,35 +171,164 @@
                     <span class="text-bold">*Orden de lectura</span>
                 </li>
             </ul>
-            <h3>Tipos de Selectores</h3>
+            <section>
+                <h2>Tipos de Selectores</h2>
+                <ul>
+                    <li>Selectores Básicos
+                        <ul>
+                            <li>ID (#)</li>
+                            <li>Clase (.)</li>
+                            <li>Pseudo-clases - Selector que permite modificar un elemento según su estado o la
+                                interacción
+                                del usuario con el mismo
+                                <ul>
+                                    <li>:link - Propia del elemento a. Aplica a aquellos elementos a que nunca fueron
+                                        "clickeados" por el usuario</li>
+                                    <li>:visited - Propia del elemento a. Aplica a aquellos elementos a que fueron
+                                        "clickeados" por el usuario</li>
+                                    <li>:hover - Permite modificar el estilo del elemento cuando el usuario pasa el
+                                        mouse
+                                        por arriba</li>
+                                </ul>
+                            </li>
+                            <li>Etiqueta (nombre de la etiqueta)</li>
+                            <li>Universal (*)</li>
+                        </ul>
+                    </li>
+                    <li>Selectores Compuestos
+                        <ul>
+                            <li>Selector grupal (selector, selector {...})</li>
+                            <li>Selector descendente
+                                <ul>
+                                    <li>Selector hijo (selector(padre) selector(hijo) {...}) - Quiero modificar un
+                                        elemento
+                                        siempre que
+                                        se encuentre dentro de otro</li>
+                                    <li>Selector hijo directo (selector(padre)>selector(hijo) {...}) - Quiero modificar
+                                        un
+                                        elemento
+                                        siempre que se encuentre directamente dentro de otro</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>Ejemplos Selector Descendente</h3>
+                <div>
+                    <p>
+                        (1)Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, obcaecati mollitia ut
+                        dolorem
+                        ullam temporibus quae maxime commodi recusandae blanditiis, similique ad illum id optio
+                        necessitatibus quam ducimus error distinctio.
+                    </p>
+                    <section>
+                        <p>
+                            (2)Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem maiores delectus quam
+                            aperiam
+                            sequi corporis repudiandae eligendi atque magnam, aliquam sunt laudantium doloremque fuga?
+                            Aliquid accusamus quasi cum cupiditate debitis!
+                        </p>
+                    </section>
+                </div>
+                <div class="padre">
+                    <p>
+                        (3)Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, obcaecati mollitia ut
+                        dolorem
+                        ullam temporibus quae maxime commodi recusandae blanditiis, similique ad illum id optio
+                        necessitatibus quam ducimus error distinctio.
+                    </p>
+                    <section>
+                        <p>
+                            (4)Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem maiores delectus quam
+                            aperiam
+                            sequi corporis repudiandae eligendi atque magnam, aliquam sunt laudantium doloremque fuga?
+                            Aliquid accusamus quasi cum cupiditate debitis!
+                        </p>
+                    </section>
+                </div>
+                <h3>Especificidad de los Selectores</h3>
+                <p>
+                    La Especificidad de un Selector es un cálculo que el navegador hace para saber qué estilo aplicar
+                    cuando hay un conflicto. Siempre se va a poner el estilo que se aplica con el selector más
+                    específico
+                </p>
+                <h4>Tabla de valores de especificidad</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Selector</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ID</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>Clase</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Etiqueta</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Universal</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <h2>Box Modeling</h2>
+            <p>Forma de pensar la estructura para realizar diseños basada en cajas.</p>
             <ul>
-                <li>Selectores Básicos
+                <li>Propiedades de la caja (cómo se forma la caja)
                     <ul>
-                        <li>ID (#)</li>
-                        <li>Clase (.)</li>
-                        <li>Pseudo-clases - Selector que permite modificar un elemento según su estado o la interacción
-                            del usuario con el mismo
-                            <ul>
-                                <li>:link - Propia del elemento a. Aplica a aquellos elementos a que nunca fueron
-                                    "clickeados" por el usuario</li>
-                                <li>:visited - Propia del elemento a. Aplica a aquellos elementos a que fueron
-                                    "clickeados" por el usuario</li>
-                                <li>:hover - Permite modificar el estilo del elemento cuando el usuario pasa el mouse
-                                    por arriba</li>
-                            </ul>
-                        </li>
-                        <li>Etiqueta (nombre de la etiqueta)</li>
-                        <li>Universal (*)</li>
+                        <li>width</li>
+                        <li>height</li>
+                        <li>padding</li>
+                        <li>margin</li>
+                        <li>border</li>
                     </ul>
                 </li>
-                <li>Selectores Compuestos
+                <li>Forma en que se calcula el tamaño de la caja
                     <ul>
-                        <li>Selector grupal (selector, selector {...})</li>
+                        <li>content-box: El espacio final ocupado por la caja es el resultado de la suma de su
+                            contenido, width,
+                            padding, margin, border</li>
+                        <li>border-box: El espacio final ocupado por la caja es el width</li>
                     </ul>
                 </li>
-                <button>Soy un botón</button>
+                <li>Características de la caja (tipo de display)
+                    <ul>
+                        <li>Elementos de bloque (display: block)</li>
+                        <li>Elementos de línea (display: inline)</li>
+                        <li>Elementos de línea-bloque (display: inline-block)</li>
+                    </ul>
+                </li>
             </ul>
-            <section class="bg-image"></section>
+            <h2>Tipos de medida</h2>
+            <p>
+                Herramienta que me permite declarar tamaño. Un tipo de medida le indica al navegador que cuenta tiene
+                que hacer para conocer el tamaño
+            </p>
+            <ul>
+                <li>Medidas relativas
+                    <ul>
+                        <li>Porcentaje (%) - tamaño = ancho/alto del elemento contenedor directo * %</li>
+                        <li>em - tamaño = medida de tipografía del elemento padre * em. El tamaño final se ve afectado
+                            por el tamaño de la tipografía de todos los elementos contenedores</li>
+                        <li>rem - tamaño = medida de tipografía del navegador * rem</li>
+                    </ul>
+                </li>
+                <li>Medidas absolutas - tamaño = valor otorgado
+                    <ul>
+                        <li>px</li>
+                    </ul>
+                </li>
+                <span class="rem">Soy un texto</span>
+            </ul>
         </section>
     </main>
     <footer class="bg-dark">
