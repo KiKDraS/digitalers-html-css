@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 body,
-.text-light,
+.text-bold,
 .text-normal,
 .text-bold {
     font-family: "Lato", sans-serif;
@@ -11,7 +11,7 @@ body,
 }
 
 span,
-.text-light {
+.text-bold {
     font-weight: 300;
 }
 
@@ -28,29 +28,22 @@ h4,
     font-weight: 700;
 }
 
-/*32px => 32/16 = 2rem*/
 h1 {
     font-size: 2rem;
 }
 
-/*28px => 28/16 = 1.75rem*/
 h2 {
     font-size: 1.75rem;
 }
 
-/*24px => 24/16 = 1.5rem*/
 h3 {
     font-size: 1.5rem;
 }
 
-/*18px => 18/16 = 1.125rem*/
 p {
     font-size: 1.125rem;
 }
 
-/*No usar rem para armar espacios (margin/padding)*/
-
 .rem {
     font-size: 1.5rem;
-    /*Se evalúa el tamaño de tipografía que el usuario tiene configurado en su navegador. Por defecto, son 16px*/
 }

@@ -1,0 +1,163 @@
+.elemento-padre,
+.multi-linea,
+.problema-space {
+    width: 500px;
+    height: 500px;
+    margin: 16px auto;
+    border: 1px solid black;
+    background-color: rgb(211, 214, 222);
+
+    /*
+        Flexbox
+    */
+    display: flex;
+    /*flex-direction: flow*/
+    align-items: center;
+    /*eje secundario (vertical)*/
+    justify-content: space-evenly;
+    /*eje principal (horizontal)*/
+}
+
+.elemento-hijo {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.flex-column {
+    flex-direction: column;
+    align-items: center;
+    /*eje secundario (horizontal)*/
+    justify-content: space-between;
+    /*eje principal (vertical)*/
+}
+
+.self-start {
+    align-self: flex-start;
+}
+
+.self-end {
+    align-self: flex-end;
+}
+
+.ejemplo-espacio-horizontal {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    /*
+        justify-content trabaja sobre el eje principal. ¿Cuál es el eje principal? - eje por defecto (eje x - horizontal)
+        ¿Qué tengo que hacer? - Poner los elementos hijos en el centro del elemento padre
+        ¿Cómo lo logro?
+            => ¿Cuál es el ancho del padre? 
+            => ¿Cuál es el ancho del contenido?
+            => ancho del padre / ancho del contenido = espacio a dejar en los costados
+                => espacio de la izquierda = espacio a dejar en los costados / 2
+                => espacio de la derecha = espacio a dejar en los costados / 2
+    */
+}
+
+.ejemplo-espacio-vertical {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 16px;
+    /*
+        El height de los elementos es automático (se modifica con el contenido)
+
+        justify-content trabaja sobre el eje principal. ¿Cuál es el eje principal? - eje y - vertical
+        ¿Qué tengo que hacer? - Poner los elementos hijos en el centro del elemento padre
+        ¿Cómo lo logro?
+            => ¿Cuál es el alto del padre? 
+            => ¿Cuál es el alto del contenido?
+            => alto del padre / alto del contenido = espacio a dejar arriba y abajo
+                => espacio de la arriba = espacio a dejar arriba y abajo / 2
+                => espacio de la abajo = espacio a dejar arriba y abajo / 2
+
+        RECORDAR - Para ubicar elementos en vertical el elemento padre tiene que tener un height declarado        
+    */
+}
+
+.multi-interna {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.problema-space {
+    width: 70vw;
+    min-width: 350px;
+    max-width: 650px;
+}
+
+.contenedor-estatico {
+    border: 1px solid red;
+    width: 500px;
+    margin-bottom: 16px;
+}
+
+.gap {
+    /*Resetear estilos declarados en .problema-space*/
+    min-width: auto;
+    max-width: none;
+    justify-content: center;
+    /*Agregar nueva propiedad*/
+    gap: 48px;
+}
+
+/*Modificar todos los div que sean hijos directos del elemento con la clase wrap*/
+.wrap>div {
+    width: 45%;
+}
+
+.wrap {
+    padding: 16px;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+/*
+    Ejemplo real
+*/
+
+.section-ml {
+    /* border: 1px solid black; */
+    background-color: #FFFFFF;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.section-ml article {
+    /* border: 1px solid blue; */
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.section-ml>.title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+}
+
+.section-ml h2 {
+    padding: 0;
+}
+
+.section-ml img {
+    width: 50%;
+    max-width: 300px;
+}
+
+.section-ml>.articles {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+}
