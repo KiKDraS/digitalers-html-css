@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/typography.css">
     <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="css/stylesReset.css">
+    <link rel="stylesheet" href="css/flexbox.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -18,6 +19,7 @@
             <a href="#git-github">Git/GitHub</a>
             <a href="#tablas">Tablas</a>
             <a href="#css">CSS</a>
+            <a href="#flexbox">Flexbox</a>
         </nav>
     </header>
     <main class="bg-light">
@@ -302,9 +304,14 @@
                 </li>
                 <li>Características de la caja (tipo de display)
                     <ul>
-                        <li>Elementos de bloque (display: block)</li>
-                        <li>Elementos de línea (display: inline)</li>
-                        <li>Elementos de línea-bloque (display: inline-block)</li>
+                        <li>Elementos de bloque (display: block) - El elemento ocupa el 100% del ancho de su contenedor,
+                            fuerza salto de línea y se le puede cambiar ancho y alto</li>
+                        <li>Elementos de línea (display: inline) - El elemento ocupa solo el tamaño de su contenido, no
+                            fuerza salto de línea y no se le puede cambiar ancho y alto</li>
+                        <li>Elementos de línea-bloque (display: inline-block) - El elemento ocupa solo el tamaño de su
+                            contenido, no fuerza salto de línea y se le puede cambiar ancho y alto </li>
+                        <li>Flexbox (display: flex) - El elemento tiene la capacidad de indicarle a sus hijos cómo deben
+                            ubicarse. Sólo puede hacerlo de forma horizontal o vertical</li>
                     </ul>
                 </li>
             </ul>
@@ -320,6 +327,12 @@
                         <li>em - tamaño = medida de tipografía del elemento padre * em. El tamaño final se ve afectado
                             por el tamaño de la tipografía de todos los elementos contenedores</li>
                         <li>rem - tamaño = medida de tipografía del navegador * rem</li>
+                        <li>viewport(vw, vh) - tamaño = ancho/alto de la pantalla * vw%/vh%
+                            <ul>
+                                <li>width: 50vw; - tamaño = 50% del ancho de la pantalla</li>
+                                <li>height: 50vh; - tamaño = 50% del alto de la pantalla</li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 <li>Medidas absolutas - tamaño = valor otorgado
@@ -329,6 +342,145 @@
                 </li>
                 <span class="rem">Soy un texto</span>
             </ul>
+        </section>
+        <section id="flexbox">
+            <h2>Flexbox</h2>
+            <p>
+                Flexbox es una herramienta que nos permite manipular el contenido de un elemento HTML.
+                Es un modelo de diseño de cajas en el que los elementos se acomodan en líneas horizontales o
+                verticales.
+            </p>
+            <p>
+                Para poder ubicar a los elementos, el navegador necesita conocer los tamaños. Por ejemplo:
+            </p>
+            <h3>Propiedades de Flexbox</h3>
+            <ul>
+                <li>align-items - Ubica a los elementos en el eje secundario
+                    <h4>Valores</h4>
+                    <ul>
+                        <li>center</li>
+                        <li>flex-start</li>
+                        <li>flex-end</li>
+                        <li>align-self - Se aplica al elemento hijo y permite moverlo de forma "independiente" del
+                            padre. Solo sirve si el elemento padre tiene display: flex</li>
+                    </ul>
+                </li>
+                <li>justify-content - Ubica a los elementos en el eje principal
+                    <h4>Valores</h4>
+                    <ul>
+                        <li>center</li>
+                        <li>flex-start</li>
+                        <li>flex-end</li>
+                        <li>space-evenly - El navegador deja espacios equitativos a todos los lados de los elementos
+                        </li>
+                        <li>space-around - El navegador deja el doble de espacio en los elementos internos y los
+                            externos los separa de forma equitativa</li>
+                        <li>space-between - Los elementos externos se pegan a los bordes del contenedor padre</li>
+                    </ul>
+                </li>
+                <li>gap: Permite declarar un espacio entre elementos</li>
+                <li>flex-wrap: Permite indicar qué hacer cuando los hijos ya no entran. Por defecto, el elemento hijo se
+                    achica</li>
+            </ul>
+            <h3>Ejemplos</h3>
+            <h4>flex-direction: flow</h4>
+            <p>Con flex-direction: flow ubicamos los elementos de forma horizontal. El eje principal es el eje X</p>
+            <div class="elemento-padre">
+                <div class="elemento-hijo bg-red self-start"></div>
+                <div class="elemento-hijo bg-warning"></div>
+                <div class="elemento-hijo bg-green"></div>
+            </div>
+            <h4>flex-direction: column</h4>
+            <p>Con flex-direction: column ubicamos los elementos de forma vertical. El eje principal es el eje Y</p>
+            <div class="elemento-padre flex-column">
+                <div class="elemento-hijo bg-red self-start"></div>
+                <div class="elemento-hijo bg-warning"></div>
+                <div class="elemento-hijo bg-green self-end"></div>
+            </div>
+
+            <h4>Calculo de espacios</h4>
+            <div class="ejemplo-espacio-horizontal bg-dark">
+                <div class="elemento-hijo bg-light"></div>
+            </div>
+
+            <div class="ejemplo-espacio-vertical bg-dark">
+                <div class="elemento-hijo bg-light"></div>
+            </div>
+
+            <h4>Ubicación múltiple</h4>
+            <div class="multi-linea">
+                <div class="elemento-hijo bg-green text-bold text-warning">1</div>
+                <div class="multi-interna">
+                    <div class="elemento-hijo bg-green text-bold text-warning">4</div>
+                    <div class="elemento-hijo bg-green text-bold text-warning">2</div>
+                    <div class="elemento-hijo bg-green text-bold text-warning">5</div>
+
+                </div>
+                <div class="elemento-hijo bg-green text-bold text-warning">3</div>
+            </div>
+
+            <h4>Problemas de los space</h4>
+            <div class="contenedor-estatico">
+                <div class="problema-space">
+                    <div class="elemento-hijo bg-green text-bold text-warning">1</div>
+                    <div class="elemento-hijo bg-green text-bold text-warning">2</div>
+                    <div class="elemento-hijo bg-green text-bold text-warning">3</div>
+                </div>
+            </div>
+
+            <h4>gap</h4>
+            <div class="problema-space gap">
+                <div class="elemento-hijo bg-green text-bold text-warning">1</div>
+                <div class="elemento-hijo bg-green text-bold text-warning">2</div>
+                <div class="elemento-hijo bg-green text-bold text-warning">3</div>
+            </div>
+
+            <h4>flex-wrap</h4>
+            <div class="problema-space wrap">
+                <div class="elemento-hijo bg-green text-bold text-warning">1</div>
+                <div class="elemento-hijo bg-green text-bold text-warning">2</div>
+                <div class="elemento-hijo bg-green text-bold text-warning">3</div>
+            </div>
+
+            <h4>Ejemplo de uso real</h4>
+            <section class="section-ml">
+                <div class="title">
+                    <h2>Título del section</h2>
+                    <a href="https://wwww.google.com" target="_blank">Soy un link</a>
+                </div>
+                <div class="articles">
+                    <article>
+                        <img src="images/tv.webp" alt="tv">
+                        <a href="https://wwww.google.com" target="_blank">Soy un link con la descripción del
+                            artículo</a>
+                        <span>$30000</span>
+                        <span>$25000</span>
+                        <span>22% off</span>
+                        <p>en 6 cuotas sin interés</p>
+                        <span>Envío gratis</span>
+                    </article>
+                    <article>
+                        <img src="images/tv.webp" alt="tv">
+                        <a href="https://wwww.google.com" target="_blank">Soy un link con la descripción del
+                            artículo</a>
+                        <span>$30000</span>
+                        <span>$25000</span>
+                        <span>22% off</span>
+                        <p>en 6 cuotas sin interés</p>
+                        <span>Envío gratis</span>
+                    </article>
+                    <article>
+                        <img src="images/tv.webp" alt="tv">
+                        <a href="https://wwww.google.com" target="_blank">Soy un link con la descripción del
+                            artículo</a>
+                        <span>$30000</span>
+                        <span>$25000</span>
+                        <span>22% off</span>
+                        <p>en 6 cuotas sin interés</p>
+                        <span>Envío gratis</span>
+                    </article>
+                </div>
+            </section>
         </section>
     </main>
     <footer class="bg-dark">

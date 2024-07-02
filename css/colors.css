@@ -14,6 +14,22 @@
     color: #333;
 }
 
+.bg-red {
+    background-color: red;
+}
+
+.bg-green {
+    background-color: green;
+}
+
+.bg-warning {
+    background-color: rgb(205, 205, 50);
+}
+
+.bg-black {
+    background-color: #333;
+}
+
 .bg-dark {
     background-color: rgba(51, 51, 51, 0.5);
 }
