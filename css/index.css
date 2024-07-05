@@ -21,6 +21,14 @@ a {
     width: 48px;
 }
 
+.navbar {
+    width: 100%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
 /*
     Tablas
 */
@@ -42,7 +50,7 @@ tbody {
 th,
 td {
     padding: 8px;
-    border: 1px solid black;
+    border: 1px solid var(--black-color);
 }
 
 /*
@@ -54,7 +62,7 @@ div>p {
 }
 
 div p {
-    background-color: blue;
+    background-color: var(--blue-color);
     color: aliceblue;
 }
 
@@ -65,7 +73,7 @@ div p {
 
 .padre>p {
     background-color: rgb(160, 95, 141);
-    color: rgb(169, 169, 169);
+    color: var(--light-color);
 }
 
 .padre {
