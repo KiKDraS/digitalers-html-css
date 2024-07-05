@@ -8,18 +8,41 @@
     <link rel="stylesheet" href="css/typography.css">
     <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="css/stylesReset.css">
+    <link rel="stylesheet" href="css/utilityClases.css">
     <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/breakpoint.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
     <header class="bg-dark">
         <h1>Contenido teórico y ejemplos</h1>
-        <nav>
-            <a href="#git-github">Git/GitHub</a>
-            <a href="#tablas">Tablas</a>
-            <a href="#css">CSS</a>
-            <a href="#flexbox">Flexbox</a>
+        <nav class="navbar">
+            <a href="#git-github">
+                <button class="btn-primary--green">
+                    Git/GitHub
+                </button>
+            </a>
+            <a href="#tablas">
+                <button class="btn-primary--white">
+                    Tablas
+                </button>
+            </a>
+            <a href="#css">
+                <button class="btn-primary--green">
+                    CSS
+                </button>
+            </a>
+            <a href="#flexbox">
+                <button class="btn-primary--white">
+                    Flexbox
+                </button>
+            </a>
+            <a href="#breakpoints">
+                <button class="btn-primary--white">
+                    Breakpoints
+                </button>
+            </a>
         </nav>
     </header>
     <main class="bg-light">
@@ -479,6 +502,29 @@
                         <p>en 6 cuotas sin interés</p>
                         <span>Envío gratis</span>
                     </article>
+                </div>
+            </section>
+        </section>
+        <section id="breakpoints">
+            <h2>Media query</h2>
+            <p>Herramienta que permite trabajar con Diseño Responsivo</p>
+            <h3>Mobile First</h3>
+            <p>Forma de trabajar con media query que indica que pongamos los estilos del dispositivo mobile y después
+                apliquemos los de tablet y desktop</p>
+            <section id="mobile-first">
+                <div class="mobile-first-header"></div>
+                <div class="mobile-first-content">
+                    <img src="https://willmendesneto.com/static/482053c5941dd46736a74b22bdac1d8a/8b485/screen-with-different-sizes.avif"
+                        alt="breakpoints">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam id, veniam ipsam commodi debitis
+                        laboriosam iste molestiae, dolor similique officiis veritatis qui perspiciatis, nisi corrupti
+                        autem fugit iure praesentium doloribus.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam id, veniam ipsam commodi debitis
+                        laboriosam iste molestiae, dolor similique officiis veritatis qui perspiciatis, nisi corrupti
+                        autem fugit iure praesentium doloribus.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam id, veniam ipsam commodi debitis
+                        laboriosam iste molestiae, dolor similique officiis veritatis qui perspiciatis, nisi corrupti
+                        autem fugit iure praesentium doloribus.</p>
                 </div>
             </section>
         </section>

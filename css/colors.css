@@ -1,39 +1,55 @@
+/*
+    Variables CSS => Elementos que se usan para almacenar valores que se van a repetir a lo largo de todo el diseño
+        => :root -> Equivale a selector html {}
+            => Tiene una especificidad de 10
+            => Lo usamos porque queremos que cualquier elemento HTML pueda usar las variables
+*/
+:root {
+    --red-color: red;
+    --green-color: green;
+    --yellow-color: rgb(205, 205, 50);
+    --blue-color: blue;
+    --black-color: black;
+    --dark-color: rgba(51, 51, 51, 0.5);
+    --lighting-color: rgba(185, 184, 184, 0.627);
+}
+
 .text-red {
-    color: red;
+    color: var(--red-color);
 }
 
 .text-green {
-    color: green;
+    color: var(--green-color);
 }
 
 .text-warning {
-    color: rgb(205, 205, 50);
+    color: var(--yellow-color);
 }
 
 .text-black {
-    color: #333;
+    color: var(--black-color);
 }
 
 .bg-red {
-    background-color: red;
+    background-color: var(--red-color);
 }
 
 .bg-green {
-    background-color: green;
+    background-color: var(--green-color);
 }
 
 .bg-warning {
-    background-color: rgb(205, 205, 50);
+    background-color: var(--yellow-color);
 }
 
 .bg-black {
-    background-color: #333;
+    background-color: var(--black-color);
 }
 
 .bg-dark {
-    background-color: rgba(51, 51, 51, 0.5);
+    background-color: var(--dark-color)
 }
 
 .bg-light {
-    background-color: rgba(185, 184, 184, 0.627);
+    background-color: var(--lighting-color)
 }

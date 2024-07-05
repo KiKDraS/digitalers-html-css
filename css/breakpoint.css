@@ -1,0 +1,69 @@
+/*
+    Mobile First
+        => Forma de trabajar con media query que indica que pongamos los estilos del dispositivo mobile y después apliquemos los de tablet y desktop
+
+    //Estilos generales (mobile)
+    //Después lo cambia en tablet
+    //Último lo que cambia en desktop
+*/
+
+#mobile-first>.mobile-first-content>p {
+    color: var(--black-color);
+    background-color: inherit;
+    padding: 0;
+}
+
+/*
+    Vista mobile (breakpoint hasta 767px)
+*/
+
+#mobile-first,
+.mobile-first-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.mobile-first-header {
+    width: 100%;
+    height: 200px;
+    background-color: var(--blue-color);
+}
+
+#mobile-first>.mobile-first-content>img {
+    width: 100%;
+    max-width: 500px;
+}
+
+/*
+    Tablets
+*/
+@media (min-width: 768px) {
+    #mobile-first>.mobile-first-content>img {
+        max-width: 400px;
+        margin-right: 16px;
+        float: left;
+    }
+
+    .mobile-first-content {
+        display: block;
+    }
+}
+
+/*
+    Desktop
+*/
+
+@media (min-width: 1024px) {
+    #mobile-first>.mobile-first-content>img {
+        float: none;
+    }
+
+    .mobile-first-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}

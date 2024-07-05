@@ -1,0 +1,27 @@
+.btn-primary,
+.btn-primary--green,
+.btn-primary--white {
+    padding: 16px 8px;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    line-height: 1.5px;
+    border-radius: 8px;
+    min-width: 120px;
+    border: 1px solid #396186;
+}
+
+.btn-primary--green {
+    background-color: #396186;
+    color: white;
+}
+
+.btn-primary--white {
+    color: #396186;
+    background-color: white;
+}
+
+.btn-primary:hover,
+.btn-primary--green:hover,
+.btn-primary--white:hover {
+    cursor: pointer;
+}
