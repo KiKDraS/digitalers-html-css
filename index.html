@@ -15,36 +15,50 @@
 </head>
 
 <body>
-    <header class="bg-dark">
-        <h1>Contenido teórico y ejemplos</h1>
-        <nav class="navbar">
-            <a href="#git-github">
-                <button class="btn-primary--green">
+    <div class="hero-header">
+        <header class="header bg-dark">
+            <div class="navbar-container">
+                <button id="btn-nav">&equiv;</button>
+                <nav id="nav" class="navbar--mobile">
+                    <a href="#git-github">
+                        Git/GitHub
+                    </a>
+                    <a href="#tablas">
+                        Tablas
+                    </a>
+                    <a href="#css">
+                        CSS
+                    </a>
+                    <a href="#flexbox">
+                        Flexbox
+                    </a>
+                    <a href="#breakpoints">
+                        Breakpoints
+                    </a>
+                </nav>
+            </div>
+            <nav class="navbar--desktop">
+                <a href="#git-github" class="btn-primary--green">
                     Git/GitHub
-                </button>
-            </a>
-            <a href="#tablas">
-                <button class="btn-primary--white">
+                </a>
+                <a href="#tablas" class="btn-primary--white">
                     Tablas
-                </button>
-            </a>
-            <a href="#css">
-                <button class="btn-primary--green">
+                </a>
+                <a href="#css" class="btn-primary--green">
                     CSS
-                </button>
-            </a>
-            <a href="#flexbox">
-                <button class="btn-primary--white">
+                </a>
+                <a href="#flexbox" class="btn-primary--white">
                     Flexbox
-                </button>
-            </a>
-            <a href="#breakpoints">
-                <button class="btn-primary--white">
+                </a>
+                <a href="#breakpoints" class="btn-primary--green">
                     Breakpoints
-                </button>
-            </a>
-        </nav>
-    </header>
+                </a>
+            </nav>
+        </header>
+        <div class="title-container">
+            <h1>Contenido teórico y ejemplos</h1>
+        </div>
+    </div>
     <main class="bg-light">
         <section id="git-github">
             <h2>Git/GitHub</h2>
@@ -127,7 +141,7 @@
                     <li><a href="https://www.youtube.com/watch?v=wL8gCda3pG4" target="_blank">GitHub Pages</a></li>
                 </ul>
 
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/L_lWQZNhN7w?si=H1kZ-1Wub39Wnje1"
+                <iframe class="video" src="https://www.youtube.com/embed/L_lWQZNhN7w?si=H1kZ-1Wub39Wnje1"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -525,10 +539,84 @@
                 </div>
             </section>
         </section>
+        <section>
+            <h2 class="sombra">Sombras y Filtros</h2>
+            <img src="https://cdn.pixabay.com/photo/2016/11/19/23/00/css3-1841590_1280.png" alt="logo" class="filtro">
+        </section>
+        <section>
+            <h2>Overflow</h2>
+            <p>
+                Permite indicar qué quiero que suceda cuando el contenido es más grande que el contenedor.
+                En vertical sólo aplica si el contenedor tiene un height declarado
+            </p>
+            <section style="margin-bottom: 16px;" class="container-overflow">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, architecto, laboriosam, quod
+                    cupiditate alias veniam illum perspiciatis nesciunt delectus reprehenderit ratione aperiam
+                    quos autem? Quod, autem?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, architecto, laboriosam, quod
+                    cupiditate alias veniam illum perspiciatis nesciunt delectus reprehenderit ratione aperiam
+                    quos autem? Quod, autem?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, architecto, laboriosam, quod
+                    cupiditate alias veniam illum perspiciatis nesciunt delectus reprehenderit ratione aperiam
+                    quos autem? Quod, autem?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, architecto, laboriosam, quod
+                    cupiditate alias veniam illum perspiciatis nesciunt delectus reprehenderit ratione aperiam
+                    quos autem? Quod, autem?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, architecto, laboriosam, quod
+                    cupiditate alias veniam illum perspiciatis nesciunt delectus reprehenderit ratione aperiam
+                    quos autem? Quod, autem?
+                </p>
+            </section>
+            <section class="container-overflow">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, architecto, laboriosam, quod
+                    cupiditate alias veniam illum perspiciatis nesciunt delectus reprehenderit ratione aperiam
+                    quos autem? Quod, autem?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, architecto, laboriosam, quod
+                    cupiditate alias veniam illum perspiciatis nesciunt delectus reprehenderit ratione aperiam
+                    quos autem? Quod, autem?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, architecto, laboriosam, quod
+                    cupiditate alias veniam illum perspiciatis nesciunt delectus reprehenderit ratione aperiam
+                    quos autem? Quod, autem?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, architecto, laboriosam, quod
+                    cupiditate alias veniam illum perspiciatis nesciunt delectus reprehenderit ratione aperiam
+                    quos autem? Quod, autem?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, architecto, laboriosam, quod
+                    cupiditate alias veniam illum perspiciatis nesciunt delectus reprehenderit ratione aperiam
+                    quos autem? Quod, autem?
+                </p>
+            </section>
+        </section>
     </main>
     <footer class="bg-dark">
         <span>&copy; Digitalers 2024</span>
     </footer>
+    <script>
+        const btn = document.getElementById("btn-nav");
+        const nav = document.getElementById("nav");
+        nav.style.display = "none";
+
+        btn.addEventListener("click", () => {
+            nav.style.display = nav.style.display === "none" ? "block" : "none";
+        });
+    </script>
 </body>
 
 </html>

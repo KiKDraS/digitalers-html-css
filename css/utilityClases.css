@@ -8,6 +8,7 @@
     border-radius: 8px;
     min-width: 120px;
     border: 1px solid #396186;
+    text-align: center;
 }
 
 .btn-primary--green {

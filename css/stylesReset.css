@@ -8,10 +8,20 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    overflow: hidden;
+}
+
 header,
 main,
 footer {
     padding: 8px 16px;
+}
+
+main {
+    height: calc(100vh - 35vh - 35px);
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 h1,
