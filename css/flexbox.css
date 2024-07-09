@@ -1,7 +1,8 @@
 .elemento-padre,
 .multi-linea,
 .problema-space {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: 500px;
     margin: 16px auto;
     border: 1px solid black;
@@ -93,11 +94,11 @@
     max-width: 650px;
 }
 
-.contenedor-estatico {
+/* .contenedor-estatico {
     border: 1px solid red;
     width: 500px;
     margin-bottom: 16px;
-}
+} */
 
 .gap {
     /*Resetear estilos declarados en .problema-space*/

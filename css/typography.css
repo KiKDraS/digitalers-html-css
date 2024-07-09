@@ -33,19 +33,20 @@ h4,
 }
 
 h1 {
-    font-size: 2rem;
+    letter-spacing: 2px;
+    font-size: clamp(1.8rem, calc(1rem + 2.5vw), 2.8rem);
 }
 
 h2 {
-    font-size: 1.75rem;
+    font-size: clamp(1.6rem, 2vw, 2.6rem);
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 1.5vw, 2.2rem);
 }
 
 p {
-    font-size: 1.125rem;
+    font-size: clamp(1rem, 1.2vw, 1.6rem);
 }
 
 .rem {
