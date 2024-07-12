@@ -1,0 +1,111 @@
+.grid-container {
+    width: 95vw;
+    height: 50vh;
+    margin: 16px auto;
+    border: 1px solid black;
+}
+
+.grid-rows-cols {
+    /*
+        Armar la grilla
+    */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: repeat(3, 150px); */
+    grid-template-rows: repeat(3, 1fr);
+    /* grid-template-rows: repeat(3, 100px); */
+
+    justify-content: flex-end;
+    align-content: flex-end;
+}
+
+.grid-element {
+    background-color: aquamarine;
+}
+
+.span-2 {
+    background-color: red;
+    /*
+        1 => La línea en la que inicia
+        span 2 => Cantidad de líneas a sumar
+    */
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.span-2 p {
+    width: 50%;
+    background-color: inherit;
+}
+
+.grid-image {
+    width: 100%;
+}
+
+.row-span {
+    grid-row: span 3;
+}
+
+
+/*
+    Mobile
+*/
+.grid-areas {
+    display: grid;
+    /*
+        Las columnas se declaran por repetición de nombre
+        Las filas se declaran por comillas
+    */
+    grid-template-areas: "area-header area-header area-header"
+        "area-main area-main area-main"
+        "area-main area-main area-main"
+        "area-main area-main area-main"
+        "area-main area-main area-main"
+        "area-main area-main area-main"
+        "area-footer area-footer area-footer";
+}
+
+.area-header {
+    grid-area: area-header;
+    background-color: cornflowerblue;
+}
+
+.area-main {
+    grid-area: area-main;
+    background-color: aquamarine;
+}
+
+.area-aside {
+    grid-area: area-aside;
+    background-color: lightblue;
+    display: none;
+}
+
+.area-footer {
+    grid-area: area-footer;
+    background-color: lightgreen;
+}
+
+/*
+    Tablets
+*/
+@media (min-width: 768px) {
+    .area-aside {
+        display: block;
+    }
+
+    .grid-areas {
+        grid-template-areas: "area-header area-header area-header"
+            "area-main area-main area-aside"
+            "area-main area-main area-aside"
+            "area-main area-main area-aside"
+            "area-main area-main area-aside"
+            "area-main area-main area-aside"
+            "area-footer area-footer area-footer";
+    }
+}

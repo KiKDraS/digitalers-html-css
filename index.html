@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digitalers</title>
     <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="css/stylesReset.css">
     <link rel="stylesheet" href="css/utilityClases.css">
     <link rel="stylesheet" href="css/flexbox.css">
     <link rel="stylesheet" href="css/breakpoint.css">
+    <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -19,9 +21,9 @@
         <header class="header bg-dark">
             <div class="navbar-container">
                 <button id="btn-nav">&equiv;</button>
-                <nav id="nav" class="navbar--mobile">
+                <nav aria-label="navbar--mobile" id="nav" class="navbar--mobile">
                     <a href="#git-github">
-                        Git/GitHub
+                        <div class="icon-github"></div> Git/GitHub
                     </a>
                     <a href="#tablas">
                         Tablas
@@ -35,9 +37,12 @@
                     <a href="#breakpoints">
                         Breakpoints
                     </a>
+                    <a href="#grid">
+                        Grid
+                    </a>
                 </nav>
             </div>
-            <nav class="navbar--desktop">
+            <nav aria-label="navbar--desktop" class="navbar--desktop">
                 <a href="#git-github" class="btn-primary--green">
                     Git/GitHub
                 </a>
@@ -52,6 +57,9 @@
                 </a>
                 <a href="#breakpoints" class="btn-primary--green">
                     Breakpoints
+                </a>
+                <a href="#grid" class="btn-primary--white">
+                    Grid
                 </a>
             </nav>
         </header>
@@ -603,6 +611,65 @@
                     quos autem? Quod, autem?
                 </p>
             </section>
+        </section>
+        <section id="grid">
+            <h2>Grid</h2>
+            <p>
+                Un Grid es un diseño flexible y móvil que divide el contenido en celdas en un contenedor.
+                El contenido se organiza en líneas y columnas en función de las propiedades de ancho y alto de las
+                celdas.
+            </p>
+            <h3>Propiedades de declaración de filas y columnas</h3>
+            <p>Una fila/columna se declara indicando cuál es el tamaño que debe ocupar. El tamaño de las filas/columnas
+                debe pensarse en relación al tamaño del elemento que tiene display grid</p>
+            <ul>
+                <li>grid-template-columns - Permite declarar columnas</li>
+                <li>grid-template-row - Permite declarar columnas</li>
+            </ul>
+            <h3>Tipo de medida fr</h3>
+            <p>
+                Medida propia de las grillas que permite la distribución del espacio ocupado por las filas y columnas
+                sin sobrepasar el tamaño del contenedor padre
+            </p>
+
+            <h3>Propiedades de ubicación de la grilla</h3>
+            <p>
+                Sólo tiene sentido utilizar estas propiedades si la grilla no ocupa el espacio total del elemento
+                contenedor
+            </p>
+            <ul>
+                <li>justify-content - ubica la grilla en el eje x</li>
+                <li>align-content - ubica la grilla en el eje y</li>
+            </ul>
+
+            <h3>Propiedades para indicar cuánto espacio ocupa un elemento</h3>
+            <p>
+                Todos los elementos se posicionan en el primer cuadrante libre. Siempre se empieza a contar desde el
+                cuadrante de arriba a la izquiera. Todos los elementos se ubican uno detras del otro. Los elementos se
+                posicionan por orden de lectura del HTML
+            </p>
+
+            <div class="grid-container grid-rows-cols">
+                <section class="grid-element span-2">
+                    <h3>Un título</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, adipisci voluptate ut saepe
+                        incidunt numquam esse voluptatibus neque cupiditate expedita sapiente quo corporis. Sequi
+                        molestias eos et, laborum rem perferendis?
+                    </p>
+                </section>
+                <div class="grid-element row-span">
+                    <img src="images/grid.png" alt="" class="grid-image">
+                </div>
+            </div>
+            </p>
+
+            <div class="grid-container grid-areas">
+                <div class="area-header"></div>
+                <div class="area-main"></div>
+                <div class="area-aside"></div>
+                <div class="area-footer"></div>
+            </div>
         </section>
     </main>
     <footer class="bg-dark">
