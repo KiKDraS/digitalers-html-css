@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/flexbox.css">
     <link rel="stylesheet" href="css/breakpoint.css">
     <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/position.css">
+    <link rel="stylesheet" href="css/transiciones.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -40,9 +42,12 @@
                     <a href="#grid">
                         Grid
                     </a>
+                    <a href="#position">
+                        Position
+                    </a>
                 </nav>
             </div>
-            <nav aria-label="navbar--desktop" class="navbar--desktop">
+            <nav aria-label="navbar--desktop" class="navbar--desktop" style="position: sticky; top: 0">
                 <a href="#git-github" class="btn-primary--green">
                     Git/GitHub
                 </a>
@@ -60,6 +65,9 @@
                 </a>
                 <a href="#grid" class="btn-primary--white">
                     Grid
+                </a>
+                <a href="#position" class="btn-primary--green">
+                    Position
                 </a>
             </nav>
         </header>
@@ -98,7 +106,7 @@
                     ofrece herramientas para facilitar la colaboración entre desarrolladores, como:</p>
                 <ul>
                     <li>
-                        <span class="text-bold">Repositorios remotos</span>:
+                        <span class="text- class=" focus"bold">Repositorios remotos</span>:
                         Almacenan el código en la nube, accesible para múltiples
                         usuarios.
                     </li>
@@ -671,17 +679,154 @@
                 <div class="area-footer"></div>
             </div>
         </section>
+        <section id="position">
+            <h2>Position</h2>
+            <p>
+                La propiedad position permite controlar la ubicación de un elemento en el documento. Tiene cuatro
+                valores posibles: static, relative, absolute, fixed y sticky.
+            </p>
+            <p>
+                Todo elemento que tenga en su propiedad position un valor distinto de static va a permitir el trabajo en
+                capas ("apilar cajas hacia afuera")
+            </p>
+            <ul>
+                <li>static (default) - La caja ocupa espacio. El espacio ocupado dependerá de su propiedad display y de
+                    su elemento contenedor</li>
+                <li>relative - La caja ocupa el espacio que tiene asignado pero puede moverse y apilarse. Se usa como
+                    referencia para otros elementos con position distinto de static</li>
+                <li>absolute - La caja no ocupa el espacio asignado, por el contrario se posiciona en relación al primer
+                    elmento padre que no tenga position static o, si ninguno de sus elementos padre tiene un position
+                    distinto de static, se posiciona en relación al body</li>
+                <li>fixed - La caja no ocupa el espacio asignado. Se ubica en relación a la pantalla</li>
+                <li>sticky - La caja ocupa el espacio que tiene asignado, puede moverse y "se pega" al borde declarado.
+                </li>
+            </ul>
+            <h3>Mover elementos con position distinto de static</h3>
+            <p>
+                Para mover un elemento con position distinto de static, se utilizan las propiedades top, bottom, left, y
+                right. Estas propiedades se utilizan para indicar la posición en píxeles del documento o en relación al
+                elemento padre que tiene position relative.
+            </p>
+            <p>
+                Si utilizo top: 10px. El elemento se mueve desde arriba 10px hacia abajo
+            </p>
+            <p>
+                Si utilizo left: 10px. El elemento se mueve desde la izquierda 10px hacia la derecha
+            </p>
+            <p>
+                Si utilizo top: -10px. El elemento se mueve desde abajo 10px hacia arriba
+            </p>
+            <p>
+                Si utilizo left: -10px. El elemento se mueve desde la derecha 10px hacia la izquierda
+            </p>
+            <h3>Modificar el orden de las capas</h3>
+            <p>
+                La propiedad z-index permite indicar qué caja debe ubicar más arriba y cuál más abajo. Cuanto más alto
+                el valor de z-index, más arriba se ubica la caja
+            </p>
+            <div class="relative">
+                <div class="absolute"></div>
+                <div class="absolute bg-dark"></div>
+            </div>
+            <button id="whatsapp" class="fixed">
+                <span class="icon-whatsapp"></span>
+                <div id="chat" class="chat">
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                    <span class="chat-text">Texto</span>
+                </div>
+            </button>
+            <div class="sticky"></div>
+        </section>
+        <section id="transiciones">
+            <h2>Transiciones</h2>
+            <div class="transition-container">
+                <a href="#" class="transicion-entrada">Soy un link</a>
+                <a href="#" class="transicion-entrada-salida">Soy un link</a>
+                <a href="#" class="transicion-multiple">Soy un link</a>
+                <button id="efecto-fade">Soy un botón</button>
+                <div id="cuadrado" class="cuadrado"></div>
+                <div class="cuadrado rotate"></div>
+                <div class="cuadrado scale"></div>
+                <div class="wrapper">
+                    <div class="cuadrado translate"></div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>pseudo-clases y pseudo-elementos</h2>
+            <input type="text" class="focus">
+        </section>
     </main>
     <footer class="bg-dark">
         <span>&copy; Digitalers 2024</span>
     </footer>
     <script>
+        /*
+            Nav mobile
+        */
         const btn = document.getElementById("btn-nav");
         const nav = document.getElementById("nav");
         nav.style.display = "none";
 
         btn.addEventListener("click", () => {
             nav.style.display = nav.style.display === "none" ? "block" : "none";
+        });
+
+        /*
+            Position
+        */
+        const chat = document.getElementById("chat");
+        const btnChat = document.getElementById("whatsapp");
+        btnChat.addEventListener("click", () => {
+            chat.style.display = chat.style.display === "none" ? "flex" : "none";
+        });
+
+        /*
+            Transiciones
+        */
+        const btnFade = document.getElementById("efecto-fade");
+        const cuadrado = document.getElementById("cuadrado");
+        let oculto = true;
+
+        btnFade.addEventListener("click", () => {
+            if (oculto) {
+                cuadrado.classList.add("fade-in");
+                cuadrado.classList.remove("fade-out");
+                oculto = false;
+            } else {
+                cuadrado.classList.add("fade-out");
+                cuadrado.classList.remove("fade-in");
+                oculto = true;
+            }
         });
     </script>
 </body>

@@ -1,0 +1,114 @@
+.transition-container {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.transicion-entrada {
+    background-color: #ddd;
+    color: #222;
+    padding: 8px;
+}
+
+.transicion-entrada:hover {
+    background-color: #fff;
+    color: #666;
+    padding: 24px;
+    border: 1px solid #888;
+
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+.transicion-entrada-salida {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    transition: background-color 0.5s linear;
+}
+
+.transicion-entrada-salida:hover {
+    background-color: red;
+
+    /* transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: linear; */
+    transition: background-color 1s linear;
+}
+
+.transicion-multiple {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    transition: background-color 0.5s linear, padding 1s ease;
+}
+
+.transicion-multiple:hover {
+    background-color: red;
+    color: white;
+    padding: 25px;
+    transition: background-color 1s linear, padding 2s ease;
+}
+
+#efecto-fade {
+    background-color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cuadrado {
+    width: 150px;
+    opacity: 0;
+    background-color: blue;
+}
+
+.fade-in {
+    opacity: 1;
+    height: 150px;
+    transition: all 1s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+    height: 0;
+    transition: all 1s ease-in-out;
+}
+
+.rotate {
+    opacity: 1;
+    height: 150px;
+    border-top-left-radius: 50px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.rotate:hover {
+    transform: rotate(180deg);
+}
+
+.scale {
+    opacity: 1;
+    height: 150px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.scale:hover {
+    transform: scale(0.5);
+}
+
+.wrapper {
+    /* border: 1px solid black; */
+    width: 80vw;
+}
+
+.translate {
+    opacity: 1;
+    height: 150px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.wrapper:hover>.translate {
+    transform: translateX(calc(80vw - 150px));
+}

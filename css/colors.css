@@ -47,9 +47,9 @@
 }
 
 .bg-dark {
-    background-color: var(--dark-color)
+    background-color: var(--dark-color) !important;
 }
 
 .bg-light {
-    background-color: var(--lighting-color)
+    background-color: var(--lighting-color);
 }
